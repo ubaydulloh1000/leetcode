@@ -2,18 +2,19 @@ class Solution:
     def increasingTriplet(self, nums: List[int]) -> bool:
         n = len(nums)
 
-        i = 0
-        left = max(nums)
-        middle = max(nums)
-            
-        while i < n:
-            right = nums[i]
-            if left >= right:
-                left = right
-            elif middle >= right:
-                middle = right
-            elif left < 
-            i++
+        if n < 3: 
+            return False
+        
+        a, b = float("inf"), float("inf")
+        for i in range(0, n):
+            if nums[i] <= a:
+                a = nums[i]
+            elif nums[i] <= b:
+                b = nums[i]
+            else:
+                return True
+        return False
+
 
 
 def main():

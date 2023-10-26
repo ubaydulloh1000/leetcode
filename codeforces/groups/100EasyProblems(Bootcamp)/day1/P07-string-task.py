@@ -5,14 +5,14 @@ vowels = ["a", "o", "y", "e", "u", "i"]
 res = ""
 
 for i in s:
-	if i in vowels:
+	if i.lower() in vowels:
 		continue
 	else:
 		res += "."
 		if i.isupper():
 			res += i.lower()
 		else:
-			res += i.upper()
+			res += i
 
 
 print(res)
